@@ -9,10 +9,10 @@
 <p><img align="right" src="https://github.com/Adam-pw/Adam-pw/blob/main/animation_500_kxa883sd.gif" alt="coding animation" /></p>
 
 ## About Me
-- 🎓 Former lawyer turned tech enthusiast
-- 💻 Currently learning to code and build my homelab
-- ✈️ Active member of Grupo Aeromexico Virtual
-- 🏠 Homelab enthusiast (currently working with Proxmox, Docker, and networking)
+- 🎓 Recently graduated lawyer with a growing passion for technology
+- 💻 Learning to code and building out my own homelab
+- ✈️ Virtual pilot and CEO Aeromexico Connect Virtual
+- 🏠 Homelab enthusiast exploring Proxmox, Docker, and home networking
 - 🧠 Fascinated by the intersection of law and technology
 
 ## My Current Tech Stack & Interests
