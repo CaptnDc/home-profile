@@ -1,4 +1,8 @@
-# Hello there! I'm Charles Spurgeon 👨‍💼➡️👨‍💻
+<h1 align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&center=true&width=435&lines=Hello%2C+I'm+Charles+%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB;Lawyer+%E2%9C%96%EF%B8%8F+Turning+Developer+%F0%9F%92%BB;Homelab+Enthusiast+%F0%9F%9B%A0;Flight+Simulator+Pilot+%E2%9C%88%EF%B8%8F&center=true&size=24" alt="Typing SVG" />
+  </a>
+</h1>
 
 ![](https://github.com/halfrost/halfrost/blob/master/icons/header_.png)
 
