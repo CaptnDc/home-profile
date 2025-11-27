@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VA Portfolio | Professional Virtual Assistant Services</title>
+    <title>VA Portfolio | Professional Virtual Assistant</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -102,6 +102,7 @@
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
+            color: var(--primary-blue);
         }
 
         /* Hero Section */
@@ -143,6 +144,8 @@
             transition: var(--transition);
             opacity: 0;
             animation: fadeInUp 1s forwards 1.1s;
+            border: none;
+            cursor: pointer;
         }
 
         .btn:hover {
@@ -206,17 +209,16 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background-color: var(--light-blue);
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: var(--transition);
-        }
-
-        .about-image:hover img {
-            transform: scale(1.05);
+        .about-image i {
+            font-size: 8rem;
+            color: var(--accent-blue);
         }
 
         /* Services Section */
@@ -298,13 +300,15 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             position: relative;
             height: 300px;
+            background-color: var(--light-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .portfolio-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
+        .portfolio-item i {
+            font-size: 4rem;
+            color: var(--accent-blue);
         }
 
         .portfolio-overlay {
@@ -313,7 +317,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 51, 102, 0.8);
+            background: rgba(0, 51, 102, 0.9);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -328,10 +332,6 @@
             opacity: 1;
         }
 
-        .portfolio-item:hover img {
-            transform: scale(1.1);
-        }
-
         .portfolio-overlay h3 {
             color: var(--white);
             font-size: 1.5rem;
@@ -343,11 +343,58 @@
             text-align: justify;
         }
 
-        /* Contact Section */
-        .contact {
+        /* Testimonials Section */
+        .testimonials {
             background-color: var(--gray-bg);
         }
 
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--light-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--accent-blue);
+        }
+
+        .author-info h4 {
+            color: var(--primary-blue);
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
         .contact-content {
             display: flex;
             gap: 50px;
@@ -544,7 +591,24 @@
 
         @media (max-width: 768px) {
             .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
                 display: none;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 10px 0;
             }
             
             .mobile-menu {
@@ -581,6 +645,7 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="mobile-menu">
@@ -615,7 +680,7 @@
                     <p>When I'm not helping clients streamline their operations, I'm continuously expanding my skill set through professional development courses and staying updated with the latest tools and technologies in the virtual assistance field.</p>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Professional Virtual Assistant">
+                    <i class="fas fa-laptop-code"></i>
                 </div>
             </div>
         </div>
@@ -687,24 +752,78 @@
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80" alt="Social Media Campaign">
+                    <i class="fas fa-chart-line"></i>
                     <div class="portfolio-overlay">
                         <h3>Social Media Campaign</h3>
                         <p>Developed and executed a comprehensive social media strategy that increased engagement by 150% for a retail client.</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="CRM Implementation">
+                    <i class="fas fa-database"></i>
                     <div class="portfolio-overlay">
                         <h3>CRM Implementation</h3>
                         <p>Streamlined customer relationship management for a consulting firm, improving efficiency by 40%.</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Event Coordination">
+                    <i class="fas fa-calendar-check"></i>
                     <div class="portfolio-overlay">
                         <h3>Event Coordination</h3>
                         <p>Managed all logistical aspects of a virtual conference for 500+ attendees with 98% satisfaction rate.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Client Testimonials</h2>
+                <p>What my clients say about working with me.</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>"Working with this VA has transformed my business operations. The administrative support has allowed me to focus on growth strategies while knowing the day-to-day is handled professionally."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>CEO, Tech Solutions Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>"The social media management services exceeded my expectations. Our engagement rates have tripled, and we're seeing real business results from the strategic approach taken."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Michael Torres</h4>
+                            <p>Marketing Director, Retail Brand</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>"As a small business owner, having a reliable VA has been game-changing. The support with customer inquiries has improved our response time and customer satisfaction significantly."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Emily Chen</h4>
+                            <p>Founder, Eco Products Co.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -755,7 +874,7 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form>
+                    <form id="contactForm">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Your Name" required>
                         </div>
@@ -811,30 +930,13 @@
     </footer>
 
     <script>
-        // Scroll animations
+        // Mobile menu toggle
         document.addEventListener('DOMContentLoaded', function() {
-            const fadeElements = document.querySelectorAll('.fade-in');
-            
-            const fadeInOnScroll = function() {
-                fadeElements.forEach(element => {
-                    const elementTop = element.getBoundingClientRect().top;
-                    const elementVisible = 150;
-                    
-                    if (elementTop < window.innerHeight - elementVisible) {
-                        element.classList.add('visible');
-                    }
-                });
-            };
-            
-            window.addEventListener('scroll', fadeInOnScroll);
-            fadeInOnScroll(); // Check on initial load
-            
-            // Mobile menu toggle
             const mobileMenu = document.querySelector('.mobile-menu');
             const navLinks = document.querySelector('.nav-links');
             
             mobileMenu.addEventListener('click', function() {
-                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+                navLinks.classList.toggle('active');
             });
             
             // Smooth scrolling for anchor links
@@ -854,11 +956,38 @@
                         
                         // Close mobile menu if open
                         if(window.innerWidth <= 768) {
-                            navLinks.style.display = 'none';
+                            navLinks.classList.remove('active');
                         }
                     }
                 });
             });
+            
+            // Form submission
+            const contactForm = document.getElementById('contactForm');
+            if(contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your message! I will get back to you soon.');
+                    contactForm.reset();
+                });
+            }
+            
+            // Scroll animations
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const fadeInOnScroll = function() {
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 150;
+                    
+                    if (elementTop < window.innerHeight - elementVisible) {
+                        element.classList.add('visible');
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', fadeInOnScroll);
+            fadeInOnScroll();
         });
     </script>
 </body>
