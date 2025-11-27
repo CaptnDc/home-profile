@@ -4,7 +4,7 @@
 
 <h1 align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=600&size=36&pause=1000&center=true&vCenter=true&width=490&lines=Hello%2C+I'm+Charles+%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB;From+Jurisprudence+to+Code;Lawyer+%E2%9A%96%EF%B8%8F+--%3E+DevOps+Curious+%F0%9F%94%A7;Building+Automation+%26+Self-Hosting+%F0%9F%8F%A0;Virtual+Pilot+%26+Airline+CEO+%E2%9C%88%EF%B8%8F&center=true&duration=3000" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=600&size=36&pause=1000&center=true&vCenter=true&width=490&lines=Hello%2C+I'm+Charles+%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB;From+Jurisprudence+to+Code;From+Law+to+Tech+%F0%9F%94%A7;Building+Automation+%26+Self-Hosting+%F0%9F%8F%A0;Virtual+Pilot+%2C+Airline+CEO+%E2%9C%88%EF%B8%8F&center=true&duration=3000" alt="Typing SVG" />
   </a>
 </h1>
 
@@ -22,15 +22,13 @@
 
       ## 👨‍💻 About My Transition & Mission
 
-      **I am Charles**, a recently graduated **Lawyer** making a strategic career shift into the world of **Software Development and System Administration**. My background provides a unique perspective—I approach code with a focus on logic, structure, and problem-solving, much like interpreting complex statutes.
-
-      My goal is to blend legal precision with technological innovation, focusing on areas like **RegTech (Regulatory Technology)**, **Data Privacy**, and **System Automation**.
+      I am **Charles**, a recently graduated **Lawyer** making a strategic career shift into the world of **Software Development and System Administration**. My background provides a unique perspective—I approach code with a focus on logic, structure, and problem-solving, much like interpreting complex statutes. My goal is to blend legal precision with technological innovation, focusing on areas like **RegTech** (Regulatory Technology), **Data Privacy**, and **System Automation**.
 
       ### 💡 What I'm Focused On:
-      * **Programming Logic:** Deepening my command of **Python** for backend logic, scripting, and data manipulation.
-      * **Self-Hosting & Automation:** Building resilient, efficient, and cost-effective home infrastructure.
-      * **LegalTech Exploration:** Developing an understanding of how technology can streamline legal processes and compliance.
-      * **DevOps Fundamentals:** Grasping the core concepts of CI/CD, deployment, and cloud infrastructure.
+      * 💻 **Programming Logic:** Deepening my command of Python for backend logic, scripting, and data manipulation.
+      * 🏡 **Self-Hosting & Automation:** Building resilient, efficient, and cost-effective home infrastructure.
+      * ⚖️ **LegalTech Exploration:** Developing an understanding of how technology can streamline legal processes and compliance.
+      * ⚙️ **DevOps Fundamentals:** Grasping the core concepts of CI/CD, deployment, and cloud infrastructure.
 
     </td>
     <td width="40%" valign="top">
