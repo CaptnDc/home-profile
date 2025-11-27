@@ -1,994 +1,186 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VA Portfolio | Professional Virtual Assistant</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-blue: #003366;
-            --accent-blue: #0066cc;
-            --light-blue: #e6f2ff;
-            --dark-blue: #002244;
-            --text-dark: #333333;
-            --text-light: #666666;
-            --white: #ffffff;
-            --gray-bg: #f8f9fa;
-            --transition: all 0.3s ease;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: var(--white);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-
-        /* Header Styles */
-        header {
-            background-color: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-
-        .nav-links li {
-            margin-left: 30px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-blue);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: var(--accent-blue);
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .mobile-menu {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--primary-blue);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
-            color: var(--white);
-            padding: 150px 0 100px;
-            text-align: center;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            opacity: 0;
-            animation: fadeInUp 1s forwards 0.5s;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            opacity: 0;
-            animation: fadeInUp 1s forwards 0.8s;
-            text-align: justify;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--white);
-            color: var(--primary-blue);
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-            opacity: 0;
-            animation: fadeInUp 1s forwards 1.1s;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-
-        /* About Section */
-        .section {
-            padding: 100px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--primary-blue);
-            margin-bottom: 15px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            width: 70px;
-            height: 3px;
-            background-color: var(--accent-blue);
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .section-title p {
-            color: var(--text-light);
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: justify;
-        }
-
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
-
-        .about-text {
-            flex: 1;
-        }
-
-        .about-text p {
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-
-        .about-image {
-            flex: 1;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            background-color: var(--light-blue);
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .about-image i {
-            font-size: 8rem;
-            color: var(--accent-blue);
-        }
-
-        /* Services Section */
-        .services {
-            background-color: var(--gray-bg);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background-color: var(--white);
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: var(--transition);
-            text-align: center;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-
-        .service-icon {
-            font-size: 2.5rem;
-            color: var(--accent-blue);
-            margin-bottom: 20px;
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: var(--primary-blue);
-        }
-
-        .service-card p {
-            color: var(--text-light);
-            text-align: justify;
-        }
-
-        /* Stats Section */
-        .stats {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            padding: 80px 0;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            text-align: center;
-        }
-
-        .stat-item h3 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .stat-item p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        /* Portfolio Section */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .portfolio-item {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            position: relative;
-            height: 300px;
-            background-color: var(--light-blue);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .portfolio-item i {
-            font-size: 4rem;
-            color: var(--accent-blue);
-        }
-
-        .portfolio-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 51, 102, 0.9);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: var(--transition);
-            padding: 20px;
-            text-align: center;
-        }
-
-        .portfolio-item:hover .portfolio-overlay {
-            opacity: 1;
-        }
-
-        .portfolio-overlay h3 {
-            color: var(--white);
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        .portfolio-overlay p {
-            color: var(--light-blue);
-            text-align: justify;
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            background-color: var(--gray-bg);
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .testimonial-card {
-            background-color: var(--white);
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-        }
-
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: var(--light-blue);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            color: var(--accent-blue);
-        }
-
-        .author-info h4 {
-            color: var(--primary-blue);
-            margin-bottom: 5px;
-        }
-
-        .author-info p {
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-
-        /* Contact Section */
-        .contact-content {
-            display: flex;
-            gap: 50px;
-        }
-
-        .contact-info {
-            flex: 1;
-        }
-
-        .contact-form {
-            flex: 1;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 30px;
-        }
-
-        .contact-icon {
-            font-size: 1.5rem;
-            color: var(--accent-blue);
-            margin-right: 15px;
-            margin-top: 5px;
-        }
-
-        .contact-details h3 {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-            color: var(--primary-blue);
-        }
-
-        .contact-details p {
-            color: var(--text-light);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-
-        .form-control:focus {
-            border-color: var(--accent-blue);
-            outline: none;
-        }
-
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            background-color: var(--accent-blue);
-            color: var(--white);
-            border: none;
-            padding: 12px 30px;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .submit-btn:hover {
-            background-color: var(--primary-blue);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--dark-blue);
-            color: var(--white);
-            padding: 60px 0 30px;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 40px;
-        }
-
-        .footer-column {
-            flex: 1;
-        }
-
-        .footer-column h3 {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 2px;
-            background-color: var(--accent-blue);
-            bottom: 0;
-            left: 0;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: #ccc;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            color: var(--white);
-            padding-left: 5px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            color: var(--white);
-            font-size: 1.2rem;
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            background-color: var(--accent-blue);
-            transform: translateY(-3px);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: #ccc;
-            font-size: 0.9rem;
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .about-content, .contact-content {
-                flex-direction: column;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                position: fixed;
-                top: 80px;
-                left: 0;
-                width: 100%;
-                background-color: var(--white);
-                flex-direction: column;
-                align-items: center;
-                padding: 20px 0;
-                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-                display: none;
-            }
-            
-            .nav-links.active {
-                display: flex;
-            }
-            
-            .nav-links li {
-                margin: 10px 0;
-            }
-            
-            .mobile-menu {
-                display: block;
-            }
-            
-            .hero {
-                padding: 120px 0 80px;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .section {
-                padding: 80px 0;
-            }
-            
-            .footer-content {
-                flex-direction: column;
-                gap: 30px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav class="navbar">
-                <a href="#" class="logo">VA Portfolio</a>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="mobile-menu">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Professional Virtual Assistant Services</h1>
-                <p>Providing exceptional administrative, creative, and technical support to help businesses thrive. With years of experience and a commitment to excellence, I deliver tailored solutions that streamline operations and drive growth.</p>
-                <a href="#contact" class="btn">Let's Collaborate</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="section" id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Me</h2>
-                <p>Learn more about my background, skills, and approach to virtual assistance.</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I am a dedicated virtual assistant with over 5 years of experience providing comprehensive support to entrepreneurs, small businesses, and executives. My expertise spans administrative tasks, social media management, customer service, and project coordination.</p>
-                    <p>I believe in building long-term partnerships with my clients, understanding their unique needs, and delivering solutions that exceed expectations. My approach combines efficiency with attention to detail, ensuring that every task is completed to the highest standard.</p>
-                    <p>When I'm not helping clients streamline their operations, I'm continuously expanding my skill set through professional development courses and staying updated with the latest tools and technologies in the virtual assistance field.</p>
-                </div>
-                <div class="about-image">
-                    <i class="fas fa-laptop-code"></i>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="section services" id="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>My Services</h2>
-                <p>Comprehensive virtual assistance solutions tailored to your specific business needs.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <h3>Administrative Support</h3>
-                    <p>Email management, calendar organization, data entry, document preparation, and other essential administrative tasks to keep your business running smoothly.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-bullhorn"></i>
-                    </div>
-                    <h3>Social Media Management</h3>
-                    <p>Content creation, scheduling, engagement monitoring, and strategy development across all major social media platforms to enhance your online presence.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>Customer Support</h3>
-                    <p>Professional handling of customer inquiries, issue resolution, and maintaining positive customer relationships through various communication channels.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>50+</h3>
-                    <p>Projects Completed</p>
-                </div>
-                <div class="stat-item">
-                    <h3>5+</h3>
-                    <p>Years Experience</p>
-                </div>
-                <div class="stat-item">
-                    <h3>95%</h3>
-                    <p>Client Satisfaction</p>
-                </div>
-                <div class="stat-item">
-                    <h3>24/7</h3>
-                    <p>Availability</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="section" id="portfolio">
-        <div class="container">
-            <div class="section-title">
-                <h2>Portfolio</h2>
-                <p>Explore some of my recent projects and success stories.</p>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <i class="fas fa-chart-line"></i>
-                    <div class="portfolio-overlay">
-                        <h3>Social Media Campaign</h3>
-                        <p>Developed and executed a comprehensive social media strategy that increased engagement by 150% for a retail client.</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <i class="fas fa-database"></i>
-                    <div class="portfolio-overlay">
-                        <h3>CRM Implementation</h3>
-                        <p>Streamlined customer relationship management for a consulting firm, improving efficiency by 40%.</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <i class="fas fa-calendar-check"></i>
-                    <div class="portfolio-overlay">
-                        <h3>Event Coordination</h3>
-                        <p>Managed all logistical aspects of a virtual conference for 500+ attendees with 98% satisfaction rate.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="section testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>Client Testimonials</h2>
-                <p>What my clients say about working with me.</p>
-            </div>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        <p>"Working with this VA has transformed my business operations. The administrative support has allowed me to focus on growth strategies while knowing the day-to-day is handled professionally."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4>Sarah Johnson</h4>
-                            <p>CEO, Tech Solutions Inc.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        <p>"The social media management services exceeded my expectations. Our engagement rates have tripled, and we're seeing real business results from the strategic approach taken."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4>Michael Torres</h4>
-                            <p>Marketing Director, Retail Brand</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        <p>"As a small business owner, having a reliable VA has been game-changing. The support with customer inquiries has improved our response time and customer satisfaction significantly."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4>Emily Chen</h4>
-                            <p>Founder, Eco Products Co.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section contact" id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Get In Touch</h2>
-                <p>Ready to take your business to the next level? Let's discuss how I can help.</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Location</h3>
-                            <p>Available for remote work worldwide</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Email</h3>
-                            <p>contact@vaportfolio.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Phone</h3>
-                            <p>+1 (555) 123-4567</p>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Subject">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>VA Portfolio</h3>
-                    <p>Providing professional virtual assistance services to help businesses thrive in a digital world.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Administrative Support</a></li>
-                        <li><a href="#">Social Media Management</a></li>
-                        <li><a href="#">Customer Support</a></li>
-                        <li><a href="#">Project Management</a></li>
-                        <li><a href="#">Content Creation</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2023 VA Portfolio. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile menu toggle
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenu = document.querySelector('.mobile-menu');
-            const navLinks = document.querySelector('.nav-links');
-            
-            mobileMenu.addEventListener('click', function() {
-                navLinks.classList.toggle('active');
-            });
-            
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    if(targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if(targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                        
-                        // Close mobile menu if open
-                        if(window.innerWidth <= 768) {
-                            navLinks.classList.remove('active');
-                        }
-                    }
-                });
-            });
-            
-            // Form submission
-            const contactForm = document.getElementById('contactForm');
-            if(contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    alert('Thank you for your message! I will get back to you soon.');
-                    contactForm.reset();
-                });
-            }
-            
-            // Scroll animations
-            const fadeElements = document.querySelectorAll('.fade-in');
-            
-            const fadeInOnScroll = function() {
-                fadeElements.forEach(element => {
-                    const elementTop = element.getBoundingClientRect().top;
-                    const elementVisible = 150;
-                    
-                    if (elementTop < window.innerHeight - elementVisible) {
-                        element.classList.add('visible');
-                    }
-                });
-            };
-            
-            window.addEventListener('scroll', fadeInOnScroll);
-            fadeInOnScroll();
-        });
-    </script>
-</body>
-</html>
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=000d23,001f40,000d23&height=200&section=header&text=CaptnDC&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=35" width="100%"/>
+
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=FFFFFF&center=true&vCenter=true&multiline=true&repeat=true&width=900&height=150&lines=%F0%9F%92%BB+Backend+Developer+%7C+System+Architect;%E2%9C%88%EF%B8%8F+Virtual+Airline+Website+Specialist;%F0%9F%9A%80+Flight+Simulator+Integration+Expert;%F0%9F%8E%A8+Building+Elegant+Aviation+Platforms" alt="Typing SVG" />
+</a>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+
+<p align="center">
+    <img src="https://komarev.com/ghpvc/?username=CaptnDC&label=Profile%20Views&color=001f40&style=for-the-badge" alt="Profile views"/>
+  <img src="https://img.shields.io/github/followers/CaptnDC?label=Followers&style=for-the-badge&color=001f40" alt="followers"/>
+  <img src="https://img.shields.io/badge/Focus-Virtual%20Airlines-000d23?style=for-the-badge" alt="focus"/>
+  <img src="https://img.shields.io/badge/Available-For%20Hire-006400?style=for-the-badge" alt="hire"/>
+</p>
+
+</div>
+
+---
+
+<img align="right" alt="Coding" width="400" src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif">
+
+## 👨‍💻 | The Developer
+
+**name:** CaptnDC
+**role:** **Backend Developer**
+**specialization:** **Bespoke Virtual Airline** & Flight Sim Platforms
+**location:** 🌍 Remote (Global Clientele)
+**status:** 🟢 Available for Elite Freelance Projects
+**passion:** Crafting **elegant, functional, and user-centric** solutions for the virtual aviation world.
+
+<img src="https://user-images.githubusercontent.com/74038190/212284087-bbe7e430-757e-4901-90bf-4cd2ce3e1852.gif" width="30"> **Core Capabilities:**
+
+- 🎨 Focused on robust **Backend Architecture** and data integrity.
+- ✈️ Engineer **integrated crew management** systems and proprietary flight tools.
+- 🛠️ Build **custom Electronic Flight Bag (EFB)** interfaces and automation.
+- 💼 **Specialized freelancer** dedicated exclusively to aviation tech and communities.
+- 🚀 Deploy scalable systems using **Proxmox** infrastructure.
+
+<br clear="right"/>
+
+---
+
+## 🛠️ | Tech Arsenal
+
+<div align="center">
+
+### 💎 Frontend & Full-Stack Core
+
+<p>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
+  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP"/>
+  <img src="https://img.shields.io/badge/Tailwind_CSS-001f40?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind"/>
+  <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"/>
+</p>
+
+### ⚙️ Backend & Database
+
+<p>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js"/>
+  <img src="https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white" alt="Lua"/>
+  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express"/>
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB"/>
+</p>
+
+### 🚀 Infrastructure & Flight Tools
+
+<p>
+  <img src="https://img.shields.io/badge/Proxmox-E57000?style=for-the-badge&logo=proxmox&logoColor=white" alt="Proxmox"/>
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux"/>
+</p>
+<p>
+  <img src="https://img.shields.io/badge/Navigraph-0050A4?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAwIDIzNjYiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMDA1MGE0O30uY2xzLTJ7ZmlsbDojZmZmO308L3N0eWxlPjwvZGVmcz48dGl0bGU+TG9nb193aGl0ZV90ZXh0X0JsdWVfQkc8L3RpdGxlPjxnIGlkPSJMYXllcl8yIiBkYXRhLW5hbWU9IkxheWVyIDIiPjxnIGlkPSJMYXllcl8xLTIiIGRhdGEtbmFtZT0iTGF5ZXIgMSI+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iMjUwMCIgaGVpZ2h0PSIyMzY2Ii8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMzY5LjQ0LDEzMTguMTlIOTI0LjgxdjI0Mi4zNUg1ODcuMjJWMTcwMS40N2g0MTIuMzl2MjUyLjExSDM2OS40NFoiLz48cGF0aCBjbGFzcz0iY2xzLTItIiBkPSJNMTA0Ni43NCwxNTYwLjg3aDI2MC4zNGExODUuMzUsMTg1LjM1LDAsMCwwLDE4My40Ni0xNzYuNzgsMTkwLjQ0LDE5MC40NCwwLDAsMC0xODMuNDYtMTc4LjgxSDEwNDYuNzRWMzk1LjE1aDI2Ni41N3Y2NDEuNTZoLTY2Ljk1VjY3OC40Nmg3Mi42NGExMjguNTQsMTI4LjU0LDAsMCwxLDEyNy4zOCwxMjIuMzVsLS44LDEwOC4yMVY5NTAuMjZhMTI0LjQ5LDEyNC40OSwwLDAsMS0xMjcuMzcsMTIxLjUzSDEyMzQuMzJ2MTg3LjkxSDgwMi4zNHYtMTg3LjkxSDkyNy41MmE0Ni4yLDQ2LjIsMCwwLDAsNDYuOTMtNDQuMzhWMTA2MS4zNmE0Ni4xOSw0Ni4xOSwwLDAsMC00Ni45My00NC4zN0g4ODcuMzRWMTA2MS4zNmE0Ni4xOCw0Ni4xOCwwLDAsMC00Ni45Myw0NC4zN1YxNTAxLjdhMTQ1LjA2LDE0NS4wNiwwLDAsMC0xNDYuMTgsMTQ1LjIxVjM0OC41NWE3MTQzLjE0LDE0My4xNCwwLDAsMCwxNDYuMTgtMTQ1LjU2VjI0Mi4zNUExNDUuMDgsMTQ1LjA4LDAsMCwwLDU4Ny4yMiw5Ny4xNGgyNjcuMTRhMTQ1LjYxLDE0NS42MSwwLDAsMCwxNDUuMTYsMTQ2LjE1VjM3MS42MWE0Ni42MSw0Ni42MSwwLDAsMCw0Ni43LDQ0LjM3aDk0LjI1djE1NS4wNUExMzguNjQsMTM4LjY0LDAsMCwxLDE2MTAuNjYsNjc4LjQ2aDcyLjg0VjE5NDguMzVBMTI5LjYzLDEyOS42MywwLDAsMSwxNTU1LjQ4LDIwNzVIMTA0Ni43NFoiLz48L2c+PC9nPjwvc3ZnPg==" alt="Navigraph"/>
+  <img src="https://img.shields.io/badge/phpVMS-4CAF50?style=for-the-badge&logoColor=white" alt="phpVMS"/>
+</p>
+
+</div>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
+
+---
+
+## ✈️ | Bespoke Services
+
+<div align="center">
+
+| 🎯 Service | 📋 What You Get | ⚡ Turnaround |
+|-----------|----------------------------------------------------------------------------------------------------------------|--------------|
+| 🎨 **UI/UX Design & Frontend** | **Modern, aviation-focused UI/UX tailored to your VA's unique brand identity.** Delivers a stunning, professional look. | 2-4 weeks |
+| 💻 **Custom EFB Development** | **A bespoke Electronic Flight Bag (EFB)** built with interactive maps, flight data, and unique tools tailored to your operations. | 3-6 weeks |
+| 🔧 **Maintenance & Support** | Ongoing platform monitoring, security patches, bug fixes, and continuous feature expansion. | Ongoing |
+| 🚀 **Performance Optimization** | Load speed optimization, robust architecture implementation, and ensuring perfect mobile responsiveness. | 1-2 weeks |
+
+</div>
+
+---
+
+## 📊 | GitHub Statistics
+
+<div align="center">
+
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=CaptnDC&show_icons=true&theme=radical&hide_border=true&count_private=true&bg_color=000d23&title_color=001f40&icon_color=FFFFFF&text_color=FFFFFF&border_radius=10" alt="GitHub Stats"/>
+<img width="49%" src="https://github-readme-streak-stats.herokuapp.com?user=CaptnDC&theme=radical&hide_border=true&background=000d23&stroke=FFFFFF&ring=FFFFFF&fire=FFFFFF&currStreakLabel=FFFFFF&border_radius=10" alt="GitHub Streak"/>
+
+<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=CaptnDC&layout=compact&theme=radical&hide_border=true&bg_color=000d23&title_color=001f40&text_color=FFFFFF&border_radius=10&langs_count=8" alt="Top Languages"/>
+<img width="49%" src="https://github-readme-activity-graph.vercel.app/graph?username=CaptnDC&theme=react-dark&hide_border=true&bg_color=000d23&color=FFFFFF&line=FFFFFF&point=FFFFFF&area=true&radius=10" alt="Activity Graph"/>
+
+<img src="https://github-profile-trophy.vercel.app/?username=CaptnDC&theme=radical&no-frame=true&no-bg=true&row=1&column=7&margin-w=15&margin-h=15" alt="GitHub Trophies"/>
+
+</div>
+
+---
+
+## 🤝 | Let's Collaborate
+
+<div align="center">
+
+<img src="https://user-images.githubusercontent.com/74038190/212284136-03988914-d899-44b4-b1d9-4eeccf656e44.gif" width="800">
+
+### **✨ Your Vision, Engineered to Perfection.**
+
+I deliver **professional, feature-rich platforms** built specifically for the demands of leading virtual aviation communities. My focus is on delivering true value and an unparalleled user experience.
+
+<br>
+
+<a href="mailto:captndc.dev@example.com">
+  <img src="https://img.shields.io/badge/📧_EMAIL_ME-001f40?style=for-the-badge&logo=gmail&logoColor=white&labelColor=000d23" alt="Email" height="40"/>
+</a>
+<a href="https://discord.gg/your_unique_invite">
+  <img src="https://img.shields.io/badge/💬_DISCORD-001f40?style=for-the-badge&logo=discord&logoColor=white&labelColor=000d23" alt="Discord" height="40"/>
+</a>
+
+<br><br>
+
+<a href="https://www.linkedin.com/in/CaptnDC-dev/">
+  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" height="35"/>
+</a>
+<a href="https://twitter.com/CaptnDC_Dev">
+  <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" height="35"/>
+</a>
+<a href="https://grupoamxvirtual.com">
+  <img src="https://img.shields.io/badge/Portfolio-001f40?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio" height="35"/>
+</a>
+<a href="https://github.com/CaptnDC">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" height="35"/>
+</a>
+
+</div>
+
+---
+
+## 🎯 | The Differentiator
+
+<div align="center">
+
+### **⭐ Aviation-Exclusive Expertise**
+My entire focus is on **Virtual Airline platforms, crew systems, and flight simulators**. You hire a developer who speaks the language of aviation and knows exactly what tools and features your community requires.
+
+### **📐 Elegant and Scalable Code**
+I deliver a product that is not just visually stunning but built on a foundation of **clean, scalable code** and deployed using reliable **Proxmox** infrastructure for maximum longevity and performance.
+
+### **✈️ Custom Flight Solutions**
+Specializing in proprietary tools like **Custom EFBs** and unique crew management features that set your Virtual Airline apart from the competition.
+
+</div>
+
+---
+
+<div align="center">
+
+<img src="https://user-images.githubusercontent.com/74038190/212284094-e50ac2b6-bc9f-49ce-a656-5c9239d91c89.gif" width="500">
+
+### 💙 Crafting Digital Experiences for Aviation Enthusiasts Worldwide
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3000&pause=1000&color=FFFFFF&center=true&vCenter=true&width=800&lines=⭐+Let's+build+the+most+advanced+virtual+airline+platform.;🚀+Contact+me+to+begin+your+project's+discovery+phase.;✈️+Bringing+elegance+and+power+to+virtual+aviation+technology!)](https://git.io/typing-svg)
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=000d23,001f40,000d23&height=120&section=footer" width="100%"/>
+
+</div>
