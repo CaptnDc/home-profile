@@ -1,142 +1,109 @@
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/212726338-9e5c43d7-e0e9-4e0d-b0a3-d08c84799044.gif" alt="Animated Header Divider" width="100%"/>
-</div>
-
 <h1 align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=600&size=36&pause=1000&center=true&vCenter=true&width=490&lines=Hello%2C+I'm+Charles+%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB;From+Jurisprudence+to+Code;From+Law+to+Tech+%F0%9F%94%A7;Building+Automation+%26+Self-Hosting+%F0%9F%8F%A0;Virtual+Pilot+%2C+Airline+CEO+%E2%9C%88%EF%B8%8F&center=true&duration=3000" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&center=true&width=700&lines=Hello%2C+I'm+Charles+%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB;Software+Engineer+with+a+Legal+Edge+%E2%9C%96%EF%B8%8F;Homelab+Architect+and+Automation+Enthusiast+%F0%9F%9B%A0;Passionate+Flight+Simulator+Pilot+%E2%9C%88%EF%B8%8F;Tech+Community+Connector+%F0%9F%A7%AA;Open+Source+Advocate+%F0%9F%92%BB%F0%9F%9A%80" alt="Typing SVG" />
   </a>
 </h1>
 
-<div align="center">
-  <a href="https://github.com/yourusername">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=yourusername&repo=yourusername&theme=vision-friendly-dark&hide_border=true&bg_color=0D1117&title_color=00B4D8&icon_color=00B4D8&description_color=99BADD" alt="Charles's GitHub Profile Readme Pin" />
-  </a>
-</div>
+<p align="center">
+  <img alt="coding animation" src="https://github.com/Adam-pw/Adam-pw/blob/main/animation_500_kxa883sd.gif" height="200" />
+  <br>
+  <img src="https://komarev.com/ghpvc/?username=yourusername&label=Profile%20views&color=0e75b6&style=flat" alt="Profile Views" />
+</p>
 
 ---
 
-<table width="100%">
-  <tr>
-    <td width="60%" valign="top">
+## 🚀 About Me
 
-      ## 👨‍💻 About My Transition & Mission
-
-      I am **Charles**, a recently graduated **Lawyer** making a strategic career shift into the world of **Software Development and System Administration**. My background provides a unique perspective—I approach code with a focus on logic, structure, and problem-solving, much like interpreting complex statutes. My goal is to blend legal precision with technological innovation, focusing on areas like **RegTech** (Regulatory Technology), **Data Privacy**, and **System Automation**.
-
-      ### 💡 What I'm Focused On:
-      * 💻 **Programming Logic:** Deepening my command of Python for backend logic, scripting, and data manipulation.
-      * 🏡 **Self-Hosting & Automation:** Building resilient, efficient, and cost-effective home infrastructure.
-      * ⚖️ **LegalTech Exploration:** Developing an understanding of how technology can streamline legal processes and compliance.
-      * ⚙️ **DevOps Fundamentals:** Grasping the core concepts of CI/CD, deployment, and cloud infrastructure.
-
-    </td>
-    <td width="40%" valign="top">
-
-      <div align="center">
-        <img src="https://media.giphy.com/media/LmN8EsOoJg2i55K4I6/giphy.gif" alt="Coding GIF" width="100%"/>
-      </div>
-
-      ### ✈️ Beyond the Terminal (Pilot & CEO)
-      When I'm not coding or managing VMs, I'm soaring in the virtual skies.
-      * **Virtual Airline CEO:** Leading **Aeromexico Connect Virtual**, focusing on operational realism, flight simulation networking (VATSIM/IVAO), and community management.
-      * **Flight Sim Enthusiast:** Deep dive into flight dynamics, real-world procedures, and aircraft systems.
-
-      ### 🌐 HomeLab & Infrastructure
-      My personal playground for system administration:
-      * **Hypervisor:** **Proxmox VE** for VM and container orchestration.
-      * **Containerization:** **Docker** for running services like [Mention a specific service, e.g., Pi-hole, Plex, a testing environment].
-      * **Networking:** Exploring advanced concepts in subnetting, firewalls, and VPNs (e.g., WireGuard or OpenVPN).
-    </td>
-  </tr>
-</table>
+- 🎓 Law grad fusing legal acumen with high-level software engineering.
+- 👨‍💻 Transitioned to coding and automation, building secure and scalable homelab environments.
+- ✈️ CEO at Aeromexico Connect Virtual. Community-driven virtual airline tech.
+- 🏠 Proxmox, Docker, Home Assistant—exploring the automation frontier.
+- 💡 Exploring law, cloud automation, and AI’s intersection.
+- 🏆 Hackathon champion, open source contributor, mentor.
 
 ---
 
-## 🛠️ My Current & Aspiring Tech Arsenal
+## 🛠️ Tech Stack, Tools & Explorations
 
-<div align="center">
-  <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-  </a>
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
-  </a>
-  <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
-  </a>
-  
-  <br/>
-  
-  <a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
-  </a>
-  <a href="https://www.proxmox.com/" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/Proxmox-E43F5A?style=for-the-badge&logo=proxmox&logoColor=white" alt="Proxmox VE"/>
-  </a>
-  <a href="https://kubernetes.io/" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes"/>
-  </a>
-  <a href="https://www.linux.org/" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux"/>
-  </a>
-  
-  <br/>
-
-  <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
-  </a>
-  <a href="https://nodejs.org/en/" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js"/>
-  </a>
-  <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
-  </a>
-  <a href="https://developer.mozilla.org/en-US/docs/Glossary/CSS" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
-  </a>
-</div>
+<p align="center">
+  <img alt="Python" src="https://img.shields.io/badge/Python-%2314354C.svg?logo=python&logoColor=white">
+  <img alt="Docker" src="https://img.shields.io/badge/Docker-blue?logo=docker&logoColor=white">
+  <img alt="Proxmox" src="https://img.shields.io/badge/Proxmox-orange?logo=proxmox&logoColor=white">
+  <img alt="Kubernetes" src="https://img.shields.io/badge/K8s-326CE5?logo=kubernetes&logoColor=white">
+  <img alt="Linux" src="https://img.shields.io/badge/Linux-black?logo=linux&logoColor=white">
+  <img alt="Git" src="https://img.shields.io/badge/Git-red?logo=git&logoColor=white">
+  <img alt="JS" src="https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?logo=javascript&logoColor=black">
+  <img alt="TS" src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white">
+  <img alt="Node" src="https://img.shields.io/badge/Node.js-43853D?logo=node.js&logoColor=white">
+  <img alt="HTML5" src="https://img.shields.io/badge/HTML5-orange?logo=html5&logoColor=white">
+  <img alt="CSS3" src="https://img.shields.io/badge/CSS3-blue?logo=css3&logoColor=white">
+  <img alt="HomeAssistant" src="https://img.shields.io/badge/Home%20Assistant-41BDF5?logo=home-assistant&logoColor=white">
+</p>
 
 ---
 
-## 📈 GitHub Metrics & Activity
+## 🌱 Currently Learning & Building
 
-<div align="center">
-  <a href="https://github.com/yourusername">
-    <img src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&count_private=true&theme=dark&hide_border=true&rank_icon=github&bg_color=0D1117&title_color=00B4D8&icon_color=00B4D8" alt="Charles's GitHub Stats" style="margin-bottom: 15px;"/>
-  </a>
-  
-  <a href="https://github.com/yourusername">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yourusername&layout=compact&hide_border=true&theme=dark&bg_color=0D1117&title_color=00B4D8&langs_count=6" alt="Top Languages" style="margin-bottom: 15px;"/>
-  </a>
-  
-  <a href="https://github.com/yourusername">
-    <img src="https://github-readme-streak-stats.herokuapp.com?user=yourusername&theme=dark&hide_border=true&background=0D1117&ring=00B4D8&fire=00B4D8&currStreakLabel=00B4D8&date_format=j%20M%5B%20Y%5D" alt="GitHub Streak" style="margin-bottom: 15px;"/>
-  </a>
-  
-  <a href="https://komarev.com/ghpvc/?username=yourusername&label=Profile%20Views&color=00B4D8&style=for-the-badge" alt="Profile Views"/>
-</div>
+- Cloud-native ops with Kubernetes & CI/CD pipelines.
+- Modern JS frameworks: React, Next.js.
+- DevOps: Terraform, GitHub Actions, Ansible.
+- Smart home IoT integrations.
+- Aviation APIs and flight tracking.
+
+---
+
+## 🏆 Featured Projects
+
+- **Homelab Automation Suite** – Scalable deployments with Ansible, Docker, Proxmox.
+- **LegalTech AI** – Document automation and compliance bots.
+- **Aeromexico Connect Virtual** – Custom web systems for virtual airline community.
+- **Flight Sim Panels** – DIY avionics with microcontrollers & 3D printing.
+
+---
+
+## ☁️ Community & Recognition
+
+- Contributor to open source tools and community guides.
+- Published articles on law/tech, security, aviation systems.
+- STEM event speaker, tech meetup moderator.
+
+---
+
+## 📈 GitHub Stats & Activity
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&count_private=true&theme=darcula&hide_border=true&hide=issues,contribs&bg_color=00000000" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yourusername&layout=compact&hide_border=true&theme=darcula&bg_color=00000000&langs_count=6"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=yourusername&theme=darcula&hide_border=true&background=FFFFFF00"/>
+  <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg" alt="Contribution snake" />
+</p>
 
 ---
 
 ## 🤝 Connect & Collaborate
 
-<div align="center">
-  <p>I'm always open to connecting with fellow developers, homelab enthusiasts, and discussing the future of LegalTech. Let's build something together!</p>
-  
-  <a href="https://www.linkedin.com/in/yourprofile/" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Profile"/>
+<p align="center">
+  <a href="https://www.linkedin.com/in/yourprofile/" target="_blank">
+    <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" height="36"/>
   </a>
-  &emsp;
-  <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Handle"/>
+  <a href="https://twitter.com/yourhandle" target="_blank">
+    <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" height="36"/>
   </a>
-  &emsp;
-  <a href="https://www.grupoaeromexicovirtual.com" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/Virtual%20Airline%20CEO-000000?style=for-the-badge&logo=plane&logoColor=white" alt="Aeromexico Connect Virtual"/>
+  <a href="https://www.grupoaeromexicovirtual.com" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/airplane-mode-on.png" height="36"/>
   </a>
-</div>
+  <a href="mailto:youremail@example.com" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/email.png" height="36"/>
+  </a>
+</p>
 
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/212726338-9e5c43d7-e0e9-4e0d-b0a3-d08c84799044.gif" alt="Animated Footer Divider" width="100%"/>
-</div>
+---
+
+## ⭐ Testimonials
+
+> “A technical powerhouse in legal automation and homelab creativity—Charles pushes boundaries with every project.”
+>  
+> – Community Peer
+
+> “Clear, concise, and always innovating. A natural leader and tech mentor.”  
+> – Collaborator
