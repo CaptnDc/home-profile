@@ -12,10 +12,12 @@
 
 <p>
   <a href="mailto:captndc.dev@example.com">
-    <img src="https://img.shields.io/badge/COMM_LINK-EMAIL_ME-000000?style=for-the-badge&logo=gmail&logoColor=white"/>
+    <img src="https://img.shields.io/badge/EMAIL-captndc.dev@example.com-000000?style=for-the-badge&logo=gmail&logoColor=white"/>
   </a>
+  <img src="https://img.shields.io/badge/DISCORD-captndick-5865F2?style=for-the-badge&logo=discord&logoColor=white"/>
+  
   <a href="https://grupoamxvirtual.com">
-    <img src="https://img.shields.io/badge/STATUS-OPEN_FOR_COMMISSIONS-success?style=for-the-badge&logo=clock&logoColor=white"/>
+    <img src="https://img.shields.io/badge/STATUS-OPEN_FOR_HIRE-success?style=for-the-badge&logo=clock&logoColor=white"/>
   </a>
 </p>
 
